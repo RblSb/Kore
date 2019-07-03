@@ -1,7 +1,7 @@
-[submodule "Tools/koremake"]
-	path = Tools/koremake
-	url = https://github.com/Kode/koremake.git
-	branch = master
+[submodule "Tools/kincmake"]
+	path = Tools/kincmake
+	url = https://github.com/RblSb/kincmake.git
+	branch = tankzors
 [submodule "Tools/kraffiti"]
 	path = Tools/kraffiti
 	url = https://github.com/Kode/kraffiti_bin.git
