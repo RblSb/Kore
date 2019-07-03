@@ -1,5 +1,5 @@
-[submodule "Tools/kincmake"]
-	path = Tools/kincmake
+[submodule "Tools/koremake"]
+	path = Tools/koremake
 	url = https://github.com/RblSb/kincmake.git
 	branch = tankzors
 [submodule "Tools/kraffiti"]
