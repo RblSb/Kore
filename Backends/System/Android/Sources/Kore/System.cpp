@@ -664,7 +664,12 @@ extern "C" void android_main(android_app* app) {
 	}
 	KoreAndroid::getActivity()->vm->DetachCurrentThread();
 	kore(0, nullptr);
-	exit(0);
+
+	activity->vm->AttachCurrentThread(&env, nullptr);
+	jclass koreActivityClass = KoreAndroid::findClass(env, "tech.kode.kore.KoreActivity");
+	jmethodID FinishHim = env->GetStaticMethodID(koreActivityClass, "stop", "()V");
+	env->CallStaticVoidMethod(koreActivityClass, FinishHim);
+	activity->vm->DetachCurrentThread();
 }
 
 Kore::Window* Kore::System::init(const char* name, int width, int height, Kore::WindowOptions* win, Kore::FramebufferOptions* frame) {
